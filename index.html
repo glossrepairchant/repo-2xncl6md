@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>植物大战僵尸 · Plants vs Zombies</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="game-root">
+    <header id="topbar">
+      <div id="sun-counter" title="阳光">
+        <span class="sun-icon">☀</span>
+        <span id="sun-amount">50</span>
+      </div>
+      <div id="seed-bar"><!-- seed cards injected by JS --></div>
+      <button id="shovel-btn" title="铲子：移除植物">🪏</button>
+      <div id="status-pill">准备中…</div>
+    </header>
+
+    <div id="board-wrap">
+      <canvas id="board" width="900" height="500"></canvas>
+
+      <div id="overlay" class="overlay">
+        <div class="overlay-card">
+          <h1>植物大战僵尸</h1>
+          <p>放置植物，收集阳光，挡住一波又一波的僵尸！</p>
+          <ul class="rules">
+            <li>☀ 点击向日葵产出的阳光来收集</li>
+            <li>选择卡片后点击草坪格子种植</li>
+            <li>豌豆射手攻击，坚果墙阻挡，向日葵产阳光</li>
+            <li>守住所有波次即可获胜，僵尸进家则失败</li>
+          </ul>
+          <button id="start-btn" class="big-btn">开始游戏</button>
+        </div>
+      </div>
+    </div>
+
+    <footer id="hint">提示：先种向日葵攒阳光，再布置豌豆射手 🌻🌱</footer>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/entities.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
